@@ -1,10 +1,10 @@
 # 🎄 Advent of Code 2024 🎄
 
-TOTAL : 4/50 - 8%
+TOTAL : 6/50 - 12%
 
 - Day01 : ⭐⭐
 - Day02 : ⭐⭐
-- Day03 :
+- Day03 : ⭐⭐
 - Day04 :
 - Day05 :
 - Day06 :
