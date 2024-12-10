@@ -1,13 +1,17 @@
 module Day8
   def self.parse(input)
     antennas = {}
-    input.lines.each_with_index do |row, row_index|
-      row.chars.each_with_index do |c, col_index|
-        next unless /[A-Za-z0-9]/.match?(c)
-
-        antennas[c] ||= []
-        antennas[c] << [row_index, col_index]
+    row_index = 0
+    input.lines.each do |row|
+      col_index = 0
+      row.chars.each do |c|
+        if /[A-Za-z0-9]/.match?(c)
+          antennas[c] ||= []
+          antennas[c] << [row_index, col_index]
+        end
+        col_index += 1
       end
+      row_index += 1
     end
     antennas
   end
@@ -30,16 +34,6 @@ module Day8
       end
     end
     antinodes.size
-  end
-
-  def self.print_grid(input, antinodes)
-    input.lines.each_with_index do |line, row_index|
-      to_print = ""
-      line.chars.each_with_index do |c, col_index|
-        to_print += antinodes[[row_index, col_index]] ? "#" : c
-      end
-      puts to_print
-    end
   end
 
   def self.part2(input)

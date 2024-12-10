@@ -27,24 +27,28 @@ end
 # Writing spec file
 File.write("spec/day#{DATE_NUMBER}_spec.rb", "require \"./days/day#{DATE_NUMBER}/day#{DATE_NUMBER}\"
 RSpec.describe Day#{DATE_NUMBER}, \"#solve\" do
-  it \"part 1 works with sample\" do
-    str = File.read(\"./days/day#{DATE_NUMBER}/sample\")
-    expect(Day#{DATE_NUMBER}.part1(str)).to eq nil
+  describe \"part 1\" do
+    it \"works with sample\" do
+      str = File.read(\"./days/day#{DATE_NUMBER}/sample\")
+      expect(Day#{DATE_NUMBER}.part1(str)).to eq nil
+    end
+
+    it \"works with input\" do
+      str = File.read(\"./days/day#{DATE_NUMBER}/input\")
+      expect(Day#{DATE_NUMBER}.part1(str)).to eq nil
+    end
   end
 
-  it \"part 1 works with input\" do
-    str = File.read(\"./days/day#{DATE_NUMBER}/input\")
-    expect(Day#{DATE_NUMBER}.part1(str)).to eq nil
-  end
+  describe \"part 2\" do
+    it \"works with sample\" do
+      str = File.read(\"./days/day#{DATE_NUMBER}/sample\")
+      expect(Day#{DATE_NUMBER}.part2(str)).to eq nil
+    end
 
-  it \"part 2 works with sample\" do
-    str = File.read(\"./days/day#{DATE_NUMBER}/sample\")
-    expect(Day#{DATE_NUMBER}.part2(str)).to eq nil
-  end
-
-  it \"part 2 works with input\" do
-    str = File.read(\"./days/day#{DATE_NUMBER}/input\")
-    expect(Day#{DATE_NUMBER}.part2(str)).to eq nil
+    it \"works with input\" do
+      str = File.read(\"./days/day#{DATE_NUMBER}/input\")
+      expect(Day#{DATE_NUMBER}.part2(str)).to eq nil
+    end
   end
 end
 ")
