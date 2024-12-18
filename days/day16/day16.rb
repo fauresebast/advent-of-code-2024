@@ -78,15 +78,15 @@ module Day16
     roaming(input).first.cost
   end
 
-  def self.print_paths(input, best_tiles)
-    input.lines.each_with_index do |row, row_index|
-      line = ""
-      row.chars.each_with_index do |c, col_index|
-        line += best_tiles[[row_index, col_index]] ? "O" : c
-      end
-      puts line
-    end
-  end
+  # def self.print_paths(input, best_tiles)
+  #   input.lines.each_with_index do |row, row_index|
+  #     line = ""
+  #     row.chars.each_with_index do |c, col_index|
+  #       line += best_tiles[[row_index, col_index]] ? "O" : c
+  #     end
+  #     puts line
+  #   end
+  # end
 
   def self.part2(input)
     best_tiles = {}
@@ -96,7 +96,7 @@ module Day16
         path = path.parent
       end
     end
-    print_paths(input, best_tiles)
+    # print_paths(input, best_tiles)
     best_tiles.size
   end
 end
