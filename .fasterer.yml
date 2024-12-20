@@ -1,2 +1,4 @@
 exclude_paths:
   - 'vendor/**/*.rb'
+speedups:
+  each_with_index_vs_while: false
